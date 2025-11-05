@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact Us | Supreme Tiling Group{% endblock %}
+{% block content %}
+
+<!-- ===== HERO SECTION ===== -->
+<section
+  class="relative h-[40vh] md:h-[60vh] flex items-center justify-center text-center bg-black text-white"
+  style="background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;"
+>
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 px-6">
+    <h1 class="text-4xl md:text-6xl font-bold uppercase">
+      Contact <span class="text-gold">Us</span>
+    </h1>
+    <p class="mt-4 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto uppercase">
+      <a href="/">Home</a> > Contact Us
+    </p>
+  </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="bg-white py-20 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- Contact Info -->
+    <div>
+      <h2 class="text-4xl font-bold uppercase mb-6 text-black">
+        Get in <span class="text-gold">Touch</span>
+      </h2>
+      <p class="text-gray-600 mb-8">
+        We’d love to discuss your tiling or renovation needs — get in touch for a free consultation and quote.
+      </p>
+
+      <ul class="space-y-4 text-gray-700">
+        <li class="flex items-center space-x-3">
+          <i data-lucide="phone" class="w-6 h-6 text-gold"></i>
+          <span><strong>Phone:</strong> 0466 828 366</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <i data-lucide="mail" class="w-6 h-6 text-gold"></i>
+          <span><strong>Email:</strong> info@supremetilinggroup.com.au</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <i data-lucide="map-pin" class="w-6 h-6 text-gold"></i>
+          <span><strong>Address:</strong> Melbourne, Victoria</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <i data-lucide="clock" class="w-6 h-6 text-gold"></i>
+          <span><strong>Office Hours:</strong> Mon–Sat: 7:00 AM – 6:00 PM | Sun: Closed</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="bg-gray-50 rounded-2xl shadow-lg p-8">
+      <h3 class="text-2xl font-semibold mb-6 text-black">Get a Free Quote</h3>
+
+      <form method="POST" class="space-y-5">
+        {% csrf_token %}
+        <div class="grid md:grid-cols-2 gap-5">
+          <input type="text" name="name" placeholder="Full Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" required>
+          <input type="email" name="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" required>
+        </div>
+        <input type="text" name="phone" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" required>
+        <input type="text" name="address" placeholder="Project Address" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
+        <textarea name="message" rows="5" placeholder="Project Description" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" required></textarea>
+        <button type="submit" class="bg-gold text-black font-semibold py-3 px-6 rounded-lg w-full hover:bg-yellow-500 transition">Submit Now</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAP SECTION ===== -->
+<section class="h-[400px] w-full">
+  <iframe
+    class="w-full h-full border-0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d315022.7994569041!2d144.59374120715252!3d-37.81421752384751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f3dce0e1%3A0x5045675218ce6e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sin!4v1699190283175!5m2!1sen!2sin">
+  </iframe>
+</section>
+
+{% endblock %}

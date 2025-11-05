@@ -1,0 +1,243 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{% block title %}Supreme Tiling Group{% endblock %}</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- data aos  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#C5A14E',
+                    },
+                },
+            },
+        }
+    </script>
+
+
+    <style>
+        body,
+        html {
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Smooth animations */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Fixed footer background */
+        .footer-bg {
+            background: url("https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1920&q=80") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Navbar blur effect */
+        .nav-blur {
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.80);
+        }
+    </style>
+</head>
+
+
+<!-- call button  -->
+
+<div class="fixed bottom-6 right-0 flex flex-col gap-3 z-50">
+  <!-- Call Button -->
+  <a href="tel:0466828366"
+     class="flex items-center justify-center gap-2 bg-blue-600 text-white font-medium px-3 py-3 w-32 rounded-l-full rounded-r-none shadow-lg hover:translate-x-[-6px] hover:bg-blue-700 transition-transform duration-300">
+     <i data-lucide="phone" class="w-5 h-5"></i>
+     
+  </a>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/61466828366"
+     target="_blank"
+     class="flex items-center justify-center gap-2 bg-white text-white border border-green-700 font-medium px-3 py-3 w-32 rounded-l-full rounded-r-none shadow-lg hover:translate-x-[-6px]  transition-transform duration-300">
+     <img src="{% static 'images/whatsapp.png' %}" alt="WhatsApp" class="w-6 h-6">
+     
+  </a>
+</div>
+
+
+
+<body class="flex flex-col min-h-screen text-gray-800">
+
+    <!-- ===== Navbar ===== -->
+    <nav class="nav-blur fixed w-full z-50 shadow-md fade-in">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+
+            <!-- Logo and Brand -->
+            <a href="/" class="flex items-center space-x-3">
+                <img src="{% static 'images/logo.png' %}" alt="Logo" class="h-16 w-auto" />
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-gray-800 focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+
+            <!-- Nav Links -->
+            <ul id="nav-links" class="hidden lg:flex space-x-6 font-medium">
+                <li><a href="{% url 'home' %}" class="hover:text-blue-600 transition">Home</a></li>
+                <li><a href="{% url 'about' %}" class="hover:text-blue-600 transition">About</a></li>
+                <li><a href="{% url 'services' %}" class="hover:text-blue-600 transition">Services</a></li>
+                <li><a href="{% url 'gallery' %}" class="hover:text-blue-600 transition">Gallery</a></li>
+                <li><a href="{% url 'contact' %}" class="hover:text-blue-600 transition">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white shadow-md">
+            <ul class="flex flex-col items-center space-y-3 py-4 font-medium">
+                <li><a href="{% url 'home' %}" class="hover:text-blue-600">Home</a></li>
+                <li><a href="{% url 'about' %}" class="hover:text-blue-600">About</a></li>
+                <li><a href="{% url 'services' %}" class="hover:text-blue-600">Services</a></li>
+                <li><a href="{% url 'gallery' %}" class="hover:text-blue-600">Gallery</a></li>
+                <li><a href="{% url 'contact' %}" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    {% block content %}
+    {% endblock %}
+
+
+
+    <footer class="footer-bg text-white py-12 relative">
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+
+            <!-- Brand + Logo -->
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <img src="{% static 'images/logo.png' %}" alt="Logo" class="h-12 w-auto" />
+                    <h3 class="text-2xl font-semibold">Supreme <span class="text-gold">Tiling Group</span></h3>
+                </div>
+                <p class="text-gray-300 leading-relaxed">
+                    Expert tiling and renovation services across Melbourne, Victoria.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-gray-300">
+                    <li><a href="{% url 'home' %}" class="hover:text-gold transition">Home</a></li>
+                    <li><a href="{% url 'about' %}" class="hover:text-gold transition">About Us</a></li>
+                    <li><a href="{% url 'services' %}" class="hover:text-gold transition">Services</a></li>
+                    <li><a href="{% url 'gallery' %}" class="hover:text-gold transition">Gallery</a></li>
+                    <li><a href="{% url 'contact' %}" class="hover:text-gold transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4">Contact Us</h4>
+                <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-center space-x-2">
+                        <i data-lucide="phone" class="w-5 h-5 text-gold"></i>
+                        <a href="tel:0466828366" class="hover:text-gold transition">0466 828 366</a>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i data-lucide="mail" class="w-5 h-5 text-gold"></i>
+                        <a href="mailto:info@supremetilinggroup.com.au" class="hover:text-gold transition">
+                            info@supremetilinggroup.com.au
+                        </a>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-gold"></i>
+                        <span>Melbourne, Victoria</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Office Hours -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4">Office Hours</h4>
+                <ul class="text-gray-300 space-y-1">
+                    <li>Monday – Saturday: 7:00 AM – 6:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="relative z-10 text-center text-gray-400 text-sm mt-10 border-t border-gray-700 pt-6">
+            © {% now 'Y' %} Supreme Tiling Group. All rights reserved.
+        </div>
+
+        <div class="relative z-10 text-center text-gray-400 text-sm mt-10 border-t border-gray-700 pt-6">
+            Designed & Developed by <a href="" class="text-white">Inspirezesttechnologies Pvt Ltd</a>
+        </div>
+    </footer>
+
+    <!-- ===== Scripts ===== -->
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fydM7z9Vr4g9eXcUBYZlG4RkSxgRrpsX8VwQ1WlV7k1t6I4nRZt1mx24/mrDmhB1jlKwZB6O3lG8R0JQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Place this right after the AOS script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 800,
+                easing: "ease-in-out",
+                once: true,
+                mirror: false,
+                offset: 50,
+                // disable: "mobile" // Optionally disable on mobile devices
+            });
+        });
+    </script>
+</body>
+
+</html>

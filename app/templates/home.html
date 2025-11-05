@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home | Supreme Tiling Group{% endblock %}
+{% block content %}
+
+<!-- ===== HERO SECTION ===== -->
+<section
+  class="relative h-[65vh] md:h-[70vh] lg:h-[100vh] flex items-center justify-center text-center bg-black text-white"
+  style="background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;"
+>
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 px-4 fade-in">
+    <h1 class="text-3xl md:text-6xl font-bold mb-4 uppercase">
+      Crafting <span class="text-gold">Beautiful Spaces</span>
+    </h1>
+    <p class="text-sm md:text-xl mb-8 text-gray-200 max-w-2xl mx-auto uppercase">
+      Since 2016, Supreme Tiling Group has been trusted across Melbourne for quality, precision, and timeless workmanship.
+    </p>
+    <div class="flex justify-center space-x-4">
+      <a href="{% url 'contact' %}" class="bg-gold text-black px-3 py-2 font-semibold rounded-lg hover:bg-yellow-600 transition" data-aos="slide-right">Get a Free Quote</a>
+      <a href="{% url 'gallery' %}" class="border-2 border-gold text-gold px-3 py-2 font-semibold rounded-lg hover:bg-gold hover:text-black transition" data-aos="slide-left">View Our Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="bg-white py-20 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <img src="https://media.istockphoto.com/id/176816406/photo/tile-flooring-samples-on-display.jpg?s=612x612&w=0&k=20&c=j3Q38Hj8eirmMn9cbncwDLGYd9e3BRQxEqTIOOE92vg=" alt="About Us" class="rounded-2xl shadow-lg" />
+    </div>
+    <div data-aos="fade-left">
+      <h2 class="text-4xl font-bold mb-4 text-black uppercase">
+        About <span class="text-gold">Us</span>
+      </h2>
+      <p class="text-gray-700 text-lg leading-relaxed text-justify">
+        Supreme Tiling Group is your premier choice for professional tiling and renovation services across Victoria.
+        Since 2016, we’ve been transforming spaces with expert craftsmanship, attention to detail, and a commitment to
+        quality that lasts.
+      </p>
+      <a href="{% url 'about' %}" class="inline-block mt-6 bg-gold text-black font-semibold px-6 py-3 rounded-lg hover:bg-yellow-600 transition">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES SECTION ===== -->
+<section class="bg-gold py-20 px-6 text-black">
+  <div class="max-w-7xl mx-auto text-center mb-12">
+    <h2 class="text-4xl font-bold uppercase">
+      Our <span class="text-white">Services</span>
+    </h2>
+    <p class="text-lg mt-2">Delivering precision and beauty in every project</p>
+  </div>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+    <!-- Wall & Floor Tiling -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-lg" data-aos="fade-right">
+      <img src="https://png.pngtree.com/thumb_back/fh260/background/20230616/pngtree-contemporary-room-design-with-wooden-laminate-floor-tile-wall-and-a-image_3621689.jpg"
+           class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+        <i data-lucide="grid" class="w-10 h-10 text-gold mb-3"></i>
+        <h3 class="text-xl font-semibold">Wall & Floor Tiling</h3>
+      </div>
+    </div>
+
+    <!-- Bathroom & Ensuite Renovations -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-lg" data-aos="fade-right">
+      <img src="https://orientbell.com/media/design-images/Master%20Bathroom%20Design%20-%2031/Luxurious%20master%20bathroom%20design%20with%20white%20flower%20strips.webp"
+           class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+        <i data-lucide="shower-head" class="w-10 h-10 text-gold mb-3"></i>
+        <h3 class="text-xl font-semibold">Bathroom & Ensuite Renovations</h3>
+      </div>
+    </div>
+
+    <!-- Waterproofing -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-lg" data-aos="fade-right">
+      <img src="https://www.shutterstock.com/image-photo/worker-applying-tile-adhesive-glue-260nw-1880834839.jpg"
+           class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+        <i data-lucide="droplets" class="w-10 h-10 text-gold mb-3"></i>
+        <h3 class="text-xl font-semibold">Waterproofing</h3>
+      </div>
+    </div>
+
+    <!-- Grouting & Sealing -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-lg" data-aos="fade-right">
+      <img src="https://t3.ftcdn.net/jpg/03/32/85/66/360_F_332856604_bWV1Z2ALl7Td3X1KfU7kzzOHX708IqXk.jpg"
+           class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+        <i data-lucide="brush" class="w-10 h-10 text-gold mb-3"></i>
+        <h3 class="text-xl font-semibold">Grouting & Sealing</h3>
+      </div>
+    </div>
+
+    <!-- Caulking & Silicone Joints -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-lg" data-aos="fade-right">
+      <img src="https://media.istockphoto.com/id/1141238824/photo/applying-silicone-sealant-with-construction-worker-fills-seam-the-ceramic-tiles-on-the-wall.jpg?s=612x612&w=0&k=20&c=PpBvLqjckXW2-k7YcBc6tdzlO0U4ZW5W_Hqqw1ieDHA="
+           class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+        <i data-lucide="settings" class="w-10 h-10 text-gold mb-3"></i>
+        <h3 class="text-xl font-semibold">Caulking & Silicone Joints</h3>
+      </div>
+    </div>
+
+    <!-- Substrate Preparation -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-lg" data-aos="fade-right">
+      <img src="https://media.istockphoto.com/id/487274754/photo/laying-the-tiles.jpg?s=612x612&w=0&k=20&c=igznbimBNuaPgQwCYN0rgCUmqCavf6VnxkuA4SVulsE="
+           class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+        <i data-lucide="layers" class="w-10 h-10 text-gold mb-3"></i>
+        <h3 class="text-xl font-semibold">Substrate Preparation</h3>
+      </div>
+    </div>
+
+    <!-- Commercial Projects -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-lg sm:col-span-2 md:col-span-3" data-aos="fade-right">
+      <img src="https://www.shutterstock.com/image-photo/marble-interior-luxury-lobby-commercial-260nw-1326795371.jpg"
+           class="w-full lg:h-80 h-64 object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+        <i data-lucide="briefcase" class="w-10 h-10 text-gold mb-3"></i>
+        <h3 class="text-xl font-semibold">Commercial Projects</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US SECTION ===== -->
+<section class="bg-white py-20 px-6">
+  <div class="max-w-7xl mx-auto text-center mb-12">
+    <h2 class="text-4xl font-bold text-black uppercase">
+      Why <span class="text-gold">Choose Us</span>
+    </h2>
+    <p class="text-gray-600 mt-3 max-w-2xl mx-auto">
+      We combine experience, skill, and integrity to deliver superior results every time.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    <div class="p-8 bg-gold text-black rounded-2xl shadow-lg hover:scale-105 transition" data-aos="fade-down" data-aos-delay="0">
+      <i data-lucide="award" class="w-10 h-10 mb-3 text-black"></i>
+      <h4 class="text-xl font-semibold mb-2">Years of Experience & Expertise</h4>
+      <p>Delivering high-quality tiling and bathroom projects since 2016.</p>
+    </div>
+
+    <div class="p-8 bg-black text-white rounded-2xl shadow-lg hover:scale-105 transition" data-aos="fade-down" data-aos-delay="200">
+      <i data-lucide="shield-check" class="w-10 h-10 mb-3 text-gold"></i>
+      <h4 class="text-xl font-semibold mb-2">Trusted & Licensed</h4>
+      <p>Fully licensed, insured, and committed to delivering on schedule.</p>
+    </div>
+
+    <div class="p-8 bg-gold text-black rounded-2xl shadow-lg hover:scale-105 transition" data-aos="fade-down" data-aos-delay="400">
+      <i data-lucide="hammer" class="w-10 h-10 mb-3 text-black"></i>
+      <h4 class="text-xl font-semibold mb-2">Quality Workmanship</h4>
+      <p>Every project is completed with precision and care.</p>
+    </div>
+
+    <div class="p-8 bg-black text-white rounded-2xl shadow-lg hover:scale-105 transition" data-aos="fade-down" data-aos-delay="600">
+      <i data-lucide="users" class="w-10 h-10 mb-3 text-gold"></i>
+      <h4 class="text-xl font-semibold mb-2">Customer-Centric Approach</h4>
+      <p>Your satisfaction comes first, from consultation to handover.</p>
+    </div>
+
+    <div class="p-8 bg-gold text-black rounded-2xl shadow-lg hover:scale-105 transition" data-aos="fade-down" data-aos-delay="800">
+      <i data-lucide="refresh-ccw" class="w-10 h-10 mb-3 text-black"></i>
+      <h4 class="text-xl font-semibold mb-2">Continuous Improvement</h4>
+      <p>We stay up to date with the latest tiling techniques and materials.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Testimonials Section -->
+<section class="bg-white py-20 px-6 overflow-hidden">
+  <div class="max-w-7xl mx-auto text-center mb-12">
+    <h2 class="text-4xl font-bold text-black uppercase">
+      What Our <span class="text-gold">Clients Say</span>
+    </h2>
+    <p class="text-gray-600 mt-3">Real stories from homeowners and builders across Melbourne.</p>
+  </div>
+
+  <!-- Carousel Wrapper -->
+  <div class="relative">
+    <div id="testimonialCarousel" class="flex space-x-6 animate-scroll">
+      
+      <!-- Testimonial Card 1 -->
+      <div class="bg-gold text-black rounded-2xl p-8 shadow-lg w-80 flex-shrink-0">
+        <i data-lucide="quote" class="w-8 h-8 text-white mb-4"></i>
+        <p class="italic">"Supreme Tiling Group transformed our bathroom with precision and detail. Absolutely love the result!"</p>
+        <h4 class="mt-4 font-semibold text-lg">– Sarah Thompson</h4>
+      </div>
+
+      <!-- Testimonial Card 2 -->
+      <div class="bg-gold text-black rounded-2xl p-8 shadow-lg w-80 flex-shrink-0">
+        <i data-lucide="quote" class="w-8 h-8 text-white mb-4"></i>
+        <p class="italic">"Reliable and professional from start to finish. Highly recommended for any tiling work."</p>
+        <h4 class="mt-4 font-semibold text-lg">– David Nguyen</h4>
+      </div>
+
+      <!-- Testimonial Card 3 -->
+      <div class="bg-gold text-black rounded-2xl p-8 shadow-lg w-80 flex-shrink-0">
+        <i data-lucide="quote" class="w-8 h-8 text-white mb-4"></i>
+        <p class="italic">"Excellent workmanship and attention to detail. Our kitchen looks brand new!"</p>
+        <h4 class="mt-4 font-semibold text-lg">– Maria Lopez</h4>
+      </div>
+
+      <!-- Testimonial Card 4 -->
+      <div class="bg-gold text-black rounded-2xl p-8 shadow-lg w-80 flex-shrink-0">
+        <i data-lucide="quote" class="w-8 h-8 text-white mb-4"></i>
+        <p class="italic">"Very punctual and respectful team. The quality speaks for itself."</p>
+        <h4 class="mt-4 font-semibold text-lg">– Chris Allen</h4>
+      </div>
+
+      <!-- Testimonial Card 5 -->
+      <div class="bg-gold text-black rounded-2xl p-8 shadow-lg w-80 flex-shrink-0">
+        <i data-lucide="quote" class="w-8 h-8 text-white mb-4"></i>
+        <p class="italic">"Our new ensuite looks stunning. Thank you for your exceptional craftsmanship!"</p>
+        <h4 class="mt-4 font-semibold text-lg">– Emma Johnson</h4>
+      </div>
+
+      <!-- Testimonial Card 6 -->
+      <div class="bg-gold text-black rounded-2xl p-8 shadow-lg w-80 flex-shrink-0">
+        <i data-lucide="quote" class="w-8 h-8 text-white mb-4"></i>
+        <p class="italic">"A flawless finish every time. Supreme Tiling Group is our go-to for all projects."</p>
+        <h4 class="mt-4 font-semibold text-lg">– Liam Brown</h4>
+      </div>
+
+      <!-- Testimonial Card 7 -->
+      <div class="bg-gold text-black rounded-2xl p-8 shadow-lg w-80 flex-shrink-0">
+        <i data-lucide="quote" class="w-8 h-8 text-white mb-4"></i>
+        <p class="italic">"The best tilers in Melbourne. Great communication and top-quality results!"</p>
+        <h4 class="mt-4 font-semibold text-lg">– Olivia White</h4>
+      </div>
+
+      <!-- Duplicate for seamless scroll -->
+      <div class="bg-gold text-black rounded-2xl p-8 shadow-lg w-80 flex-shrink-0">
+        <i data-lucide="quote" class="w-8 h-8 text-white mb-4"></i>
+        <p class="italic">"Supreme Tiling Group transformed our bathroom with precision and detail. Absolutely love the result!"</p>
+        <h4 class="mt-4 font-semibold text-lg">– Sarah Thompson</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lucide & Animation Script -->
+<script>
+  lucide.createIcons();
+</script>
+
+<!-- Scrolling Animation -->
+<style>
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .animate-scroll {
+    display: flex;
+    width: max-content;
+    animation: scroll 35s linear infinite;
+  }
+
+  /* Pause scroll on hover */
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+</style>
+
+
+
+
+
+{% endblock %}

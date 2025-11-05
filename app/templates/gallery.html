@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Services | Supreme Tiling Group{% endblock %}
+{% block content %}
+
+<!-- ===== HERO SECTION ===== -->
+<section
+  class="relative h-[40vh] md:h-[60vh] flex items-center justify-center text-center bg-black text-white"
+  style="background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;"
+>
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 px-6">
+    <h1 class="text-4xl md:text-6xl font-bold uppercase">
+      Our <span class="text-gold">Gallery</span>
+    </h1>
+    <p class="mt-4 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto uppercase">
+      <a href="/">Home</a> > Gallery
+    </p>
+  </div>
+</section>
+
+
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto my-12">
+
+    <!-- Wall & Floor Tiling -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+      <img src="https://png.pngtree.com/thumb_back/fh260/background/20230616/pngtree-contemporary-room-design-with-wooden-laminate-floor-tile-wall-and-a-image_3621689.jpg"
+           class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition"></div>
+
+    </div>
+
+    <!-- Bathroom & Ensuite Renovations -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+      <img src="https://orientbell.com/media/design-images/Master%20Bathroom%20Design%20-%2031/Luxurious%20master%20bathroom%20design%20with%20white%20flower%20strips.webp"
+           class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition"></div>
+ 
+    </div>
+
+    <!-- Waterproofing -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+      <img src="https://www.shutterstock.com/image-photo/worker-applying-tile-adhesive-glue-260nw-1880834839.jpg"
+           class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition"></div>
+
+    </div>
+
+    <!-- Grouting & Sealing -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+      <img src="https://t3.ftcdn.net/jpg/03/32/85/66/360_F_332856604_bWV1Z2ALl7Td3X1KfU7kzzOHX708IqXk.jpg"
+           class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition"></div>
+ 
+    </div>
+
+    <!-- Caulking & Silicone Joints -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+      <img src="https://media.istockphoto.com/id/1141238824/photo/applying-silicone-sealant-with-construction-worker-fills-seam-the-ceramic-tiles-on-the-wall.jpg?s=612x612&w=0&k=20&c=PpBvLqjckXW2-k7YcBc6tdzlO0U4ZW5W_Hqqw1ieDHA="
+           class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition"></div>
+
+    </div>
+
+    <!-- Substrate Preparation -->
+    <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+      <img src="https://media.istockphoto.com/id/487274754/photo/laying-the-tiles.jpg?s=612x612&w=0&k=20&c=igznbimBNuaPgQwCYN0rgCUmqCavf6VnxkuA4SVulsE="
+           class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition"></div>
+  
+    </div>
+
+ 
+
+  </div>
+
+
+{% endblock %}

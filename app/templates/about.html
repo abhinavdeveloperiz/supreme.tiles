@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us | Supreme Tiling Group{% endblock %}
+{% block content %}
+
+<!-- ===== HERO SECTION ===== -->
+<section
+  class="relative h-[40vh] md:h-[60vh] flex items-center justify-center text-center bg-black text-white"
+  style="background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;"
+>
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 px-6">
+    <h1 class="text-4xl md:text-6xl font-bold uppercase">
+      About <span class="text-gold">us</span>
+    </h1>
+    <p class="mt-4 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto uppercase">
+      <a href="/">Home</a> > About
+    </p>
+  </div>
+</section>
+
+<!-- ===== WHO WE ARE ===== -->
+<section class="bg-white py-20 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <img
+        src="https://media.istockphoto.com/id/176816406/photo/tile-flooring-samples-on-display.jpg?s=612x612&w=0&k=20&c=j3Q38Hj8eirmMn9cbncwDLGYd9e3BRQxEqTIOOE92vg="
+        alt="About Supreme Tiling Group"
+        class="rounded-2xl shadow-lg"
+      />
+    </div>
+    <div data-aos="fade-left">
+      <h2 class="text-4xl font-bold mb-4 text-black uppercase">
+        Our <span class="text-gold">Story</span>
+      </h2>
+      <p class="text-gray-700 text-lg leading-relaxed text-justify">
+        Since 2016, Supreme Tiling Group has been the trusted name in high-quality tiling and renovation across
+        Melbourne and surrounding areas.  
+        <br><br>
+        We take pride in blending creativity and precision, ensuring each project reflects timeless design and superior workmanship.  
+        From residential homes to large-scale commercial developments, our mission remains the same — to craft spaces that inspire.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR MISSION ===== -->
+<section class="bg-gold py-20 px-6 text-black">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold uppercase">
+      Our <span class="text-white">Mission & Vision</span>
+    </h2>
+    <p class="mt-6 text-lg max-w-3xl mx-auto leading-relaxed text-justify">
+        Our vision is to be Victoria’s most trusted and respected tiling group, known not only for our excellence in craftsmanship but also for our reliability, professionalism, and long-lasting client relationships.
+
+        <br><br>
+      We aim to be Melbourne’s most trusted tiling and renovation company, delivering lasting value through excellence and passion.
+    </p>
+  </div>
+</section>
+
+
+<section class="py-20 bg-gray-900 px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6 text-yellow-600">Vision & Values</h2>
+    <p class="mb-8 text-white">To be Victoria’s most trusted tiling group, known for excellence, reliability, and value.</p>
+    <div class="flex flex-wrap justify-center gap-4 text-lg font-medium">
+      <span class="bg-white border border-gold hover:bg-gold px-4 py-2 rounded-full shadow" data-aos="fade-down" data-aos-delay="0">Honesty</span>
+      <span class="bg-white border border-gold hover:bg-gold px-4 py-2 rounded-full shadow" data-aos="fade-down" data-aos-delay="200">Professionalism</span>
+      <span class="bg-white border border-gold hover:bg-gold px-4 py-2 rounded-full shadow" data-aos="fade-down" data-aos-delay="400">Craftsmanship</span>
+      <span class="bg-white border border-gold hover:bg-gold px-4 py-2 rounded-full shadow" data-aos="fade-down" data-aos-delay="600">Respect</span>
+      <span class="bg-white border border-gold hover:bg-gold px-4 py-2 rounded-full shadow" data-aos="fade-down" data-aos-delay="800">Innovation</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR VALUES ===== -->
+<section class="bg-white py-20 px-6">
+  <div class="max-w-7xl mx-auto text-center mb-12">
+    <h2 class="text-4xl font-bold text-black uppercase">
+      Our <span class="text-gold">Core Values</span>
+    </h2>
+    <p class="text-gray-600 mt-3">What drives us every day</p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    <div class="p-8 bg-gold text-black rounded-2xl shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="0">
+      <i data-lucide="award" class="w-10 h-10 mb-3 text-black"></i>
+      <h4 class="text-xl font-semibold mb-2">Quality</h4>
+      <p>We never compromise on quality. Every tile, joint, and seal is crafted with precision.</p>
+    </div>
+
+    <div class="p-8 bg-black text-white rounded-2xl shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+      <i data-lucide="users" class="w-10 h-10 mb-3 text-gold"></i>
+      <h4 class="text-xl font-semibold mb-2">Integrity</h4>
+      <p>We build trust with every client by delivering exactly what we promise — with honesty and transparency.</p>
+    </div>
+
+    <div class="p-8 bg-gold text-black rounded-2xl shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="400">
+      <i data-lucide="hammer" class="w-10 h-10 mb-3 text-black"></i>
+      <h4 class="text-xl font-semibold mb-2">Craftsmanship</h4>
+      <p>Our work speaks for itself — professional finishes that stand the test of time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR EXPERTISE ===== -->
+<section class="bg-black py-20 px-6 text-white">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-4xl font-bold mb-4 uppercase">
+        Experience You Can <span class="text-gold">Trust</span>
+      </h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        With over a decade of experience in residential and commercial tiling, our expert team ensures
+        every surface is perfectly aligned and seamlessly finished.  
+        <br><br>
+        From concept to completion, we handle every detail — waterproofing, grouting, sealing, and beyond — with dedication and pride.
+      </p>
+    </div>
+    <div>
+      <img data-aos="fade-left"
+        src="https://media.istockphoto.com/id/487274754/photo/laying-the-tiles.jpg?s=612x612&w=0&k=20&c=igznbimBNuaPgQwCYN0rgCUmqCavf6VnxkuA4SVulsE="
+        alt="Our Expertise"
+        class="rounded-2xl shadow-lg"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ===== CALL TO ACTION ===== -->
+<section class="bg-gold text-black py-16 text-center">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold uppercase">
+      Ready to Transform Your <span class="text-white">Space?</span>
+    </h2>
+    <p class="mt-4 text-lg max-w-2xl mx-auto">
+      Let’s bring your vision to life with Melbourne’s most trusted tiling specialists.
+    </p>
+    <a href="{% url 'contact' %}" class="mt-8 inline-block bg-black text-white font-semibold px-8 py-3 rounded-lg hover:bg-gray-900 transition">
+      Get a Free Quote
+    </a>
+  </div>
+</section>
+
+
+
+{% endblock %}
